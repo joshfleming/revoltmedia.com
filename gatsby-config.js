@@ -3,6 +3,7 @@ module.exports = {
     title: `Revolt Media`
   },
   plugins: [
+    `gatsby-plugin-netlify-cms`,
     `gatsby-transformer-remark`
   ],
 }
