@@ -38,13 +38,13 @@ module.exports = {
           android: true,
           appleIcon: true,
           appleStartup: true,
-          coast: false,
+          coast: true,
           favicons: true,
           firefox: true,
-          opengraph: false,
-          twitter: false,
-          yandex: false,
-          windows: false
+          opengraph: true,
+          twitter: true,
+          yandex: true,
+          windows: true
         }
       }
     },
