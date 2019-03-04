@@ -1,5 +1,6 @@
 import React from "react"
 import { StaticQuery, Link, graphql } from "gatsby"
+import { UncontrolledCarousel } from 'reactstrap';
 
 export default () => (
   <StaticQuery
@@ -36,19 +37,17 @@ export default () => (
   }
 
   render={data => (
-    <div id="slider">
-      {data.allContentfulHomepageSlide.edges.map(({ node }, index) => (
-        <div>
-          <h3>
-            {node.title}
-          </h3>
-          <img src={node.backgroundImage.resize.src} height={node.backgroundImage.resize.height} width={node.backgroundImage.resize.width} />
-          <img src={node.icon.resize.src} height={node.icon.resize.height} width={node.icon.resize.width} />
-          <div>
-            {node.description.description}
-          </div>
-        </div>
-      ))}
+    <div className="slider">
+      <UncontrolledCarousel items={
+        data.allContentfulHomepageSlide.edges.map(({ node }, index) => (
+          {
+            src: node.icon.resize.src,
+            altText: node.title,
+            caption: node.description.description,
+            header: node.title
+          }
+        ))
+      } />
     </div>
   )}
  />)

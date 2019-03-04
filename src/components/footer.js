@@ -1,15 +1,13 @@
 import React from "react"
 import { StaticQuery, Link, graphql } from "gatsby"
-import '../scss/main.scss'
-import Header from "./header"
-import Footer from "./footer"
 
-export default ({ children }) => (
+export default () => (
   <StaticQuery
   query={graphql
     `
       query {
         contentfulGlobalSettings {
+          siteTitle
           footerLogo {
             file {
               url
@@ -17,11 +15,6 @@ export default ({ children }) => (
             }
           }
           phoneNumber
-          mailingAddress {
-            childMarkdownRemark {
-              html
-            }
-          }
           disclaimer {
             childMarkdownRemark {
               html
@@ -32,14 +25,17 @@ export default ({ children }) => (
     `
   }
 
-
   render={data => (
-    <div>
-      <Header />
-        <main>
-          {children}
-        </main>
-      <Footer />
-    </div>
+    <footer>
+      <Link to={`/`}>
+        <h3>
+          {data.contentfulGlobalSettings.siteTitle}
+          <img src={data.contentfulGlobalSettings.footerLogo.file.url} />
+        </h3>
+      </Link>
+      <div className="disclaimer">
+        {data.contentfulGlobalSettings.disclaimer.childMarkdownRemark.html}
+      </div>
+    </footer>
   )}
  />)

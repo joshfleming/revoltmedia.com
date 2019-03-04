@@ -9,13 +9,9 @@ export default ({ data }) => {
   return (
     <Layout>
       <div>
-        <h1>
-          Page Title
-        </h1>
         <Slider />
         <Portfolio />
       </div>
-      <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
     </Layout>
   )
 }
