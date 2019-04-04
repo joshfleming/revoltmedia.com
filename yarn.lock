@@ -5610,7 +5610,7 @@ gatsby-plugin-favicon@^3.1.5:
     html-react-parser "^0.6.4"
     lodash "^4.17.11"
 
-gatsby-plugin-netlify-cms@^3.0.12:
+gatsby-plugin-netlify-cms@^3.0.17:
   version "3.0.17"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-netlify-cms/-/gatsby-plugin-netlify-cms-3.0.17.tgz#fd06a9cb061800a6519cd94b3647f6f058de5102"
   integrity sha512-M63gKFa9/ARvpl8Uh3GrT8FSkOhm6MoQBFUGCDb4ogUWMKHm98Ki4Re2XsV19Z87y5uaDuKxQfo5geZjwt7uyA==
