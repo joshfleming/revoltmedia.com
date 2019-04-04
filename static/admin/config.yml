@@ -1,6 +1,6 @@
 backend:
-  name: git-gateway
-  repo: master # Branch to update (optional; defaults to master)
+  name: github
+  repo: revoltmedia/revoltmedia.com # Branch to update (optional; defaults to master)
 publish_mode: editorial_workflow
 media_folder: "static/assets" # Media files will be stored in the repo under static/images/uploads
 public_folder: "assets" # The src attribute for uploaded media will begin with /images/uploads
