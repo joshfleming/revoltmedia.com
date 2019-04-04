@@ -1,13 +1,13 @@
 backend:
-  name: git-gateway
-  branch: master # Branch to update (optional; defaults to master)
+  name: github
+  repo: revoltmedia/revoltmedia.com # Branch to update (optional; defaults to master)
 publish_mode: editorial_workflow
 media_folder: "static/assets" # Media files will be stored in the repo under static/images/uploads
 public_folder: "assets" # The src attribute for uploaded media will begin with /images/uploads
 collections:
-  - name: "portfolio" # Used in routes, e.g., /admin/collections/blog
-    label: "Portfolio Item" # Used in the UI
-    folder: "_posts/portfolio" # The path to the folder where the documents are stored
+  - name: "case-studies" # Used in routes, e.g., /admin/collections/blog
+    label: "Case Study" # Used in the UI
+    folder: "_posts/case-studies" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
